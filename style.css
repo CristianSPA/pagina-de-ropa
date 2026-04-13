@@ -82,7 +82,7 @@ body{
     display:inline-block;
     padding:10px 10px;
     background:crimson;
-    color:white;
+    color:aliceblue;
     text-decoration:none;
     font-weight:bold;
     border-radius:5px;
@@ -90,6 +90,59 @@ body{
 }
 
 .boton:hover{
-    background:#e02454;
+    background:crimson;
     transform:scale(1.05);
 }
+
+.ofertas-container{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.ofertas{
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+.ofertas:hover{
+    box-shadow: 0 10px 20px aliceblue;
+}
+
+.ofertas img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all;
+}
+.ofertas figure{
+    overflow: hidden;
+}
+
+.ofertas:hover{
+    transform: scale(1.2);
+}
+
+.info-producto{
+    padding: 15px 15px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-producto button{
+    border: none;
+    background: none;
+    background-color: crimson;
+    color: aliceblue;
+    padding: 15px 10px;
+    cursor: pointer;
+
+}
+.precio{
+    font-size: 15px;
+    font-weight: 900;
+    
+}
+
