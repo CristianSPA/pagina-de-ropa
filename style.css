@@ -6,10 +6,13 @@
     list-style: none;
 }
 
+/*body*/
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #151517;
 }
+
+/*navbar*/
 
 .container {
     max-width: 1200px;
@@ -71,6 +74,36 @@ body{
     display: none
 }
 
+@media(max-width:991px){
+    .content{
+        min-height: 70px;
+    }
+    .menu{
+        top: 0;
+        padding: 20px;
+    }
+    .menu label{
+        display: initial;
+    }
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #151517;
+        display: none;
+    }
+    .menu .navbar ul li{
+        width: 100%;
+    }
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+}
+/*navbar*/
+
+/*home*/
+
 .home{
     text-align: center;
     color: aliceblue;
@@ -94,33 +127,37 @@ body{
     transform:scale(1.05);
 }
 
-.ofertas-container{
+/*home*/
+
+/*items*/
+
+.items-container{
     
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
 }
 
-.ofertas{
+.item{
     border-radius: 10px;
     background-color: aliceblue;
 }
-.ofertas:hover{
+.item:hover{
     box-shadow: 0 10px 20px aliceblue;
 }
 
-.ofertas img{
+.item img{
     width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
     transition: all;
 }
-.ofertas figure{
+.item figure{
     overflow: hidden;
 }
 
-.ofertas:hover{
+.item:hover{
     transform: scale(1.2);
 }
 
@@ -146,3 +183,25 @@ body{
     
 }
 
+/*items*/
+
+/*titulos*/
+
+.titulo{
+    font-size: 50px;
+    color: aliceblue;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: crimson;
+}
+
+.body{
+    display: grid;
+    grid-template-columns: 
+        repeat(
+            auto-fit,
+            minmax(150px, 1fr)
+        ) ;
+        gap: 32;
+}
